@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { Form, NavLink } from 'react-router-dom';
 
 import classes from './MainNavigation.module.css';
 import NewsletterSignup from './NewsletterSignup';
@@ -39,7 +39,7 @@ function MainNavigation() {
               Newsletter
             </NavLink>
           </li>
-           <li>
+          <li>
             <NavLink
               to="/auth"
               className={({ isActive }) =>
@@ -48,6 +48,11 @@ function MainNavigation() {
             >
               Authentication
             </NavLink>
+          </li>
+          <li>
+            <Form action="/logout" method="post">
+              <button>Logout</button>
+            </Form>
           </li>
         </ul>
       </nav>
